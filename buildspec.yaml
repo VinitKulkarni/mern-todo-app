@@ -11,9 +11,6 @@ phases:
 
   build:
     commands:
-      - cd /TODO/todo-frontend/public
-      - pwd
-      - npm run build
       - echo two phase done******************
 
 artifacts:
