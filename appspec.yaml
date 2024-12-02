@@ -9,12 +9,8 @@ hooks:
     - location: Scripts/installdep.sh
       timeout: 300
   AfterInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/afterbuild.sh
       timeout: 300
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: scripts/laststage.sh
       timeout: 300
-  ValidateService:
-    - location: scripts/health_check.sh
-      timeout: 300
-
