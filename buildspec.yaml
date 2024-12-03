@@ -4,10 +4,6 @@ phases:
   install:
     commands:
       - echo "Navigating to frontend directory..."
-      - ls -l
-      - sudo cd /TODO/todo_frontend/public  # Change this to the path of your frontend project directory
-      - ls -l
-      - echo "Installing dependencies..."
       - sudo npm install
 
   pre_build:
@@ -22,7 +18,8 @@ phases:
   post_build:
     commands:
       - echo "Copying build files to Nginx directory..."
-      - sudo cp -r /home/ubuntu/mern-todo-app/TODO/todo_frontend/build/* /var/www/html   # Ensure this path is correct for your build output
+      - pwd
+      - ls -l
 
 artifacts:
   files:
