@@ -5,10 +5,10 @@ phases:
     commands:
       - echo "Navigating to frontend directory..."
       - ls -l
-      - cd /TODO/todo_frontend/public  # Change this to the path of your frontend project directory
+      - sudo cd /TODO/todo_frontend/public  # Change this to the path of your frontend project directory
       - ls -l
       - echo "Installing dependencies..."
-      - npm install
+      - sudo npm install
 
   pre_build:
     commands:
@@ -17,7 +17,7 @@ phases:
   build:
     commands:
       - echo "Building the frontend application..."
-      - npm run build   # This will trigger the build process for your frontend
+      - sudo npm run build   # This will trigger the build process for your frontend
 
   post_build:
     commands:
