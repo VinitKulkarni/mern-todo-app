@@ -4,7 +4,6 @@ phases:
   install:
     commands:
       - echo "Navigating to frontend directory..."
-      - sudo npm install
 
   pre_build:
     commands:
@@ -13,13 +12,10 @@ phases:
   build:
     commands:
       - echo "Building the frontend application..."
-      - sudo npm run build   # This will trigger the build process for your frontend
 
   post_build:
     commands:
-      - echo "Copying build files to Nginx directory..."
-      - pwd
-      - ls -l
+      - echo "Copying build files to Nginx directory"
 
 artifacts:
   files:
