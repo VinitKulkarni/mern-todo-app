@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo "Navigating to frontend directory..."
-       - ls
+      - ls
       - cd /home/ubuntu/mern-todo-app/TODO/todo_frontend/public  # Change this to the path of your frontend project directory
       - echo "Installing dependencies..."
       - npm install
