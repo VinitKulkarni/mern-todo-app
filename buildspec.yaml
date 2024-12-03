@@ -2,17 +2,28 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 20.18.1  # Specify the Node.js version you need
     commands:
-      - pwd
+      - echo "Navigating to frontend directory..."
+      - cd /home/ubuntu/mern-todo-app/TODO/todo_frontend/public  # Change this to the path of your frontend project directory
       - ls
-      - echo one phase done****************
+      - echo "Installing dependencies..."
+      - npm install
+
+  pre_build:
+    commands:
+      - echo "Pre-building tasks (if any)..."
 
   build:
     commands:
-      - echo two phase done******************
+      - echo "Building the frontend application..."
+      - npm run build   # This will trigger the build process for your frontend
+
+  post_build:
+    commands:
+      - echo "Copying build files to Nginx directory..."
+      - sudo cp -r /home/ubuntu/mern-todo-app/TODO/todo_frontend/build/* /var/www/html   # Ensure this path is correct for your build output
 
 artifacts:
   files:
     - '**/*'
+  base-directory: /path/to/your/frontend/directory/build  # This should point to your actual build output directory
