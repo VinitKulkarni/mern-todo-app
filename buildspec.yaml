@@ -20,4 +20,3 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: /path/to/your/frontend/directory/build  # This should point to your actual build output directory
