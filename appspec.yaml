@@ -3,7 +3,6 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/
-
 hooks:
   BeforeInstall:
     - location: scripts/after_install.sh
