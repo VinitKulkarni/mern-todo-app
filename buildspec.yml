@@ -19,7 +19,4 @@ phases:
 
 artifacts:
   files:
-    - appspec.yaml
-    - buildspec.yaml
-    - scripts/**
-    - TODO/**
+    - '**/*'
